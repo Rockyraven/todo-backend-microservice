@@ -1,3 +1,6 @@
 api-gateway/node_modules
 auth-service/node_modules
+auth-service/.env
 todo-service/node_modules
+todo-service/.env
+node_modules

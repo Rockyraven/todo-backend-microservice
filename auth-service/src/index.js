@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require("mongoose");
 const userRouter = require('./routes/userRouter');
 const app = express();
+require('dotenv').config()
 
 
 app.get('/', (req, res) => {
@@ -11,9 +12,10 @@ app.use(express.json());
 
 app.use("/auth", userRouter);
 
+
 mongoose
   .connect(
-    "MONGODB_URL"
+    process.env.MONGODB_URL
   )
   .then(() => {
     console.log("database connected ");
